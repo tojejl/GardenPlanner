@@ -1,16 +1,17 @@
 body {
     background-color: 	#f0e68c;
-    font-family: BCentury Gothic, sans-serif;
+    font-family:  sans-serif;
     text-align: center;
     ;
 }
 
 .grid{
     text-align: center;
-    border-bottom: solid thick #9acd32;
+    border-bottom: solid 4px #9acd32;
     background-color: #eee8aa;
-    font-color: #9acd32;
-    padding: ;
+    height 1500px;
+    width: 1500px;
+    padding: 5px 10px 5px 10x;
 
 }
 .item1{

@@ -5,7 +5,7 @@
     <meta charset="UTF-8"/>
     <title th:text="${title}">Plants</title>
     <div class="grid">
-        <h1>Welcome to an Annual Garden Planner Tool</h1>
+        <h1>Welcome to an Annual Garden Planning Tool</h1>
     </div>
     <div class="item1">
         This is an app designed to help you navigate your garden.
@@ -16,18 +16,8 @@
     <!-- Since that's confusing, instead of silently skipping the render, explain that something is wrong -->
     <p th:unless="${plants}">Something went wrong. Unable to load plants</p>
 
-    <br/><br/>
-    Number of plants currently in the system: <span th:text="${plants.size()}">COUNT GOES HERE</span>.
-<!--
-    <ul>
-        <li th:each="plant: ${plants}" th:text="${plant.vegetable}">PLANT GOES HERE</li>
-    </ul>
 
-    <form action="/plants/new" method="post">
-        <input type="text" name="plantType"/>
-        <input type="submit" value="Add this plant"/>
-    </form>
--->
+
 </h1>
 </head>
 <body>
@@ -36,6 +26,8 @@
 
 <div>
     <p th:unless="${plants} and ${plants.size()}">no plants</p>
+    <br/><br/>
+    Number of plants currently in the system: <span th:text="${plants.size()}">COUNT GOES HERE</span>.
 
     <ul>
         <li th:each="plant : ${plants}" th:text="${plant.vegetable}"></li>
@@ -52,3 +44,14 @@
 
 </body>
 </html>
+
+<!--
+    <ul>
+        <li th:each="plant: ${plants}" th:text="${plant.vegetable}">PLANT GOES HERE</li>
+    </ul>
+
+    <form action="/plants/new" method="post">
+        <input type="text" name="plantType"/>
+        <input type="submit" value="Add this plant"/>
+    </form>
+-->
