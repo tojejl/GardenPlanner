@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/styles.css" />
     <meta charset="UTF-8"/>
     <title th:text="${title}">Plants</title>
-
-    <h1>Welcome to Annual Garden Planner</h1>
-    This is an app designed to help you navigate your garden.
-    With this app, users will be able to browse the list of plants, search by category, or add new plants to share with other garden enthusiasts.
+    <div class="grid">
+        <h1>Welcome to an Annual Garden Planner Tool</h1>
+    </div>
+    <div class="item1">
+        This is an app designed to help you navigate your garden.
+        With this app, users will be able to browse the list of plants, search by category, or add new plants to share with other garden enthusiasts.
+    </div>
 
     <!-- If plants is missing from the model, the rest just silently won't load.-->
     <!-- Since that's confusing, instead of silently skipping the render, explain that something is wrong -->
@@ -30,15 +33,22 @@
 <body>
 <h1 th:text="${title}">Garden Planning</h1>
 
-<p th:unless="${plants} and ${plants.size()}">no plants</p>
 
-<ul>
-    <li th:each="plant : ${plants}" th:text="${plant.vegetable}"></li>
-</ul>
+<div>
+    <p th:unless="${plants} and ${plants.size()}">no plants</p>
 
-<form action="/plants/new" method="post">
-    <input type="text" name="plantType" />
-    <input type="submit" value="Add this plant" />
-</form>
+    <ul>
+        <li th:each="plant : ${plants}" th:text="${plant.vegetable}"></li>
+    </ul>
+
+    <form action="/plants/new" method="post">
+        <input type="text" name="plantType" />
+        <input type="submit" value="Add this plant" />
+    </form>
+</div>
+
+
+</div>
+
 </body>
 </html>

@@ -1,10 +1,29 @@
 body {
-    background-color: #6B8E23;
+    background-color: 	#f0e68c;
     font-family: BCentury Gothic, sans-serif;
-    text-align: left;
-    font-color: #1a1a1a;
+    text-align: center;
+    ;
 }
 
 .grid{
+    text-align: center;
+    border-bottom: solid thick #9acd32;
+    background-color: #eee8aa;
+    font-color: #9acd32;
+    padding: ;
 
+}
+.item1{
+    padding: ;
+}
+
+h1{
+    text-align: center;
+    border-style: thick;
+    font-color: #663399
+
+}
+
+div{
+text-align: left;
 }
