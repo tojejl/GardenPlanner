@@ -34,34 +34,26 @@ public class GardenController {
         model.addAttribute("count", 42);
         return "plants";
     }
-
-    @RequestMapping(value = "add", method = RequestMethod.GET)
-    public String displayAddPlantForm(Model model) {
-        model.addAttribute("title", "Add Plant");
-        return "plant/add";
-
-    }
-    //@RequestMapping(value = "add", method = RequestMethod.POST)
-    //public String processAddPlantForm(RequestParam Plant plantType) {
-
-    //}
-}
-
-
+    
 // redirect adds plants to the list using the form on the welcome to Garden Planning page.
-    /*@RequestMapping("new")
+    @RequestMapping("new")
     public String addplants(Model model, @RequestParam String plantType) {
         System.out.println("Adding plant: " + plantType);
 
         plants.add(new Plant(plantType));
         return "redirect:";
-
     }
-    */
+}
+
+
+
+    /*
     //working to get this up and running, probably should watch the videos one more time
 //@RequestMapping(value = "add", method = RequestMethod.GET)
     //public String processAddPlantForm(Model model) {
       //  model.addAttribute("plants", "Add Plant");
        // return "plant/add";
     //}
+    */
+
 
