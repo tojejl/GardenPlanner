@@ -15,6 +15,8 @@ import java.util.List;
 @RequestMapping("plants")
 public class GardenController {
 
+
+
     private static ArrayList<Plant> plants = new ArrayList<>();
 
     public GardenController() {
@@ -24,7 +26,7 @@ public class GardenController {
     }
 
     // Request path: /plants
-    @RequestMapping("")
+    @RequestMapping(value = "")
     public String loadplants(Model model) {
         System.out.println("Loading Plants");
 
@@ -33,8 +35,21 @@ public class GardenController {
         return "plants";
     }
 
-    // redirect adds plants to the list using the form on the welcome to Garden Planning page.
-    @RequestMapping("new")
+    @RequestMapping(value = "add", method = RequestMethod.GET)
+    public String displayAddPlantForm(Model model) {
+        model.addAttribute("title", "Add Plant");
+        return "plant/add";
+
+    }
+    //@RequestMapping(value = "add", method = RequestMethod.POST)
+    //public String processAddPlantForm(RequestParam Plant plantType) {
+
+    //}
+}
+
+
+// redirect adds plants to the list using the form on the welcome to Garden Planning page.
+    /*@RequestMapping("new")
     public String addplants(Model model, @RequestParam String plantType) {
         System.out.println("Adding plant: " + plantType);
 
@@ -42,11 +57,11 @@ public class GardenController {
         return "redirect:";
 
     }
-
+    */
     //working to get this up and running, probably should watch the videos one more time
 //@RequestMapping(value = "add", method = RequestMethod.GET)
     //public String processAddPlantForm(Model model) {
       //  model.addAttribute("plants", "Add Plant");
        // return "plant/add";
     //}
-}
+

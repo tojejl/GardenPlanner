@@ -11,7 +11,7 @@ body {
     background-color: #eee8aa;
     height 1500px;
     width: 1500px;
-    padding: 5px 10px 5px 10x;
+    padding: 10px 10px 10px 10x;
 
 }
 .item1{
@@ -27,4 +27,10 @@ h1{
 
 div{
 text-align: left;
+}
+
+.navigation{
+    text-align: center;
+    background-color: #eee8aa;
+    border-bottom: solid 4px #9acd32;
 }

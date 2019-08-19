@@ -6,7 +6,16 @@
     <title th:text="${title}">Plants</title>
 </head>
 <body>
-<h1 th:text="${title}">Garden Planning</h1>
+
+
+<div class="navigation">
+<h1>Annual Garden Planner</h1>
+<a href="/index">About</a>
+<a href="/plants">Plant List</a>
+<a href="/search">Search My Plants</a>
+
+</div>
+
 
 <form method="post">
     <input type="text" name="plantType" />
