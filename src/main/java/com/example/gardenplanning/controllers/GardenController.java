@@ -25,10 +25,10 @@ public class GardenController {
     }
 
     // Request path: /about
-    @RequestMapping(value = "about")
-    public String loadWelcome(Model model) {
-        return "index";
-    }
+    //@RequestMapping(value = "")
+    //public String loadWelcome(Model model) {
+       // return "index";
+    //}
 
     // Request path: /plants
     @RequestMapping(value = "")
