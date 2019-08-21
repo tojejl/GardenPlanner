@@ -7,14 +7,11 @@ body {
 
 .grid{
     text-align: center;
-    border-bottom: solid 4px #9acd32;
     background-color: #eee8aa;
-    height 1500px;
-    width: 1500px;
-    padding: 10px 10px 10px 10x;
 
 }
 .item1{
+background-color: $f0e68c;
     padding: ;
 }
 
@@ -29,7 +26,7 @@ div{
 text-align: left;
 }
 
-.navigation{
+.header{
     text-align: center;
     background-color: #eee8aa;
     border-bottom: solid 4px #9acd32;

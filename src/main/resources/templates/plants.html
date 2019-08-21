@@ -3,25 +3,29 @@
 <head>
     <link rel="stylesheet" href="/styles.css" />
     <meta charset="UTF-8"/>
-    <title th:text="${title}">Plants</title>
-    <div class="grid">
-        <h1>Welcome to an Annual Garden Planning Tool</h1>
-    </div>
-    <div class="item1">
-        This is an app designed to help you navigate your garden.
-        With this app, users will be able to browse the list of plants, search by category, or add new plants to share with other garden enthusiasts.
-    </div>
-
-    <!-- If plants is missing from the model, the rest just silently won't load.-->
-    <!-- Since that's confusing, instead of silently skipping the render, explain that something is wrong -->
-    <p th:unless="${plants}">Something went wrong. Unable to load plants</p>
+    <title th:text="${title}">Annual Garden Planting Calendar</title>
 
 
-
-</h1>
 </head>
 <body>
-<h1 th:text="${title}">Garden Planning</h1>
+<!--
+<div class="grid">
+    <h1>Welcome to an Annual Garden Planning Tool</h1>
+</div>
+-->
+<div class="header">
+    <h1>Planting Calender</h1>
+    <a href="/about">About</a>
+    <a href="/plants">Plant List</a>
+    <a href="/search">Search</a>
+    <a href="/user">User Login</a>
+</div>
+
+<div class="item1">
+    This is an app designed to help you navigate your garden.
+    With this app, users will be able to browse the list of plants, search by category, or add new plants to share with other garden enthusiasts.
+</div>
+
 
 
 <div>

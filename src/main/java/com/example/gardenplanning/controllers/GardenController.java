@@ -4,12 +4,11 @@ import com.example.gardenplanning.model.Plant;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 
 import java.util.ArrayList;
-import java.util.List;
+
 
 @Controller
 @RequestMapping("plants")
@@ -25,6 +24,12 @@ public class GardenController {
         plants.add(new Plant("Cucumber"));
     }
 
+    // Request path: /about
+    @RequestMapping(value = "about")
+    public String loadWelcome(Model model) {
+        return "index";
+    }
+
     // Request path: /plants
     @RequestMapping(value = "")
     public String loadplants(Model model) {
@@ -34,7 +39,7 @@ public class GardenController {
         model.addAttribute("count", 42);
         return "plants";
     }
-    
+
 // redirect adds plants to the list using the form on the welcome to Garden Planning page.
     @RequestMapping("new")
     public String addplants(Model model, @RequestParam String plantType) {
