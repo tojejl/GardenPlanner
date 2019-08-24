@@ -11,24 +11,25 @@ import java.util.ArrayList;
 
 
 @Controller
-@RequestMapping("plants")
+@RequestMapping("/plants")
 public class GardenController {
 
 
 
     private static ArrayList<Plant> plants = new ArrayList<>();
 
-    public GardenController() {
+    /*public GardenController() {
         plants = new ArrayList<Plant>();
         plants.add(new Plant("Basil"));
         plants.add(new Plant("Cucumber"));
     }
+     */
 
     // Request path: /about
-    //@RequestMapping(value = "")
-    //public String loadWelcome(Model model) {
-       // return "index";
-    //}
+    @RequestMapping(" ")
+    public String loadWelcome(Model model) {
+        return "index";
+    }
 
     // Request path: /plants
     @RequestMapping(value = "")
@@ -37,11 +38,11 @@ public class GardenController {
 
         model.addAttribute("plants", plants);
         model.addAttribute("count", 42);
-        return "plants";
+        return "/plants";
     }
 
 // redirect adds plants to the list using the form on the welcome to Garden Planning page.
-    @RequestMapping("new")
+    @RequestMapping("/new")
     public String addplants(Model model, @RequestParam String plantType) {
         System.out.println("Adding plant: " + plantType);
 

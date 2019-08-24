@@ -1,6 +1,6 @@
 package com.example.gardenplanning.model;
 
-public class User {
+public class UserProfile {
 
     private String userName;
     private String firstName;
@@ -8,17 +8,17 @@ public class User {
     private String password;
     private String email;
 
-    public User(String userName, String firstName, String lastName, String password, String email) {
+    /*public User(String userName, String firstName, String lastName, String password, String email) {
         this.userName = userName;
         this.firstName = firstName;
         this.lastName = lastName;
         this.password = password;
         this.email = email;
     }
+*/
+    //public User(){
 
-    public User(){
-
-    }
+   // }
 
     public String getUserName() {
         return userName;

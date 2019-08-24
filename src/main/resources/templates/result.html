@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <link rel="stylesheet" href="/styles.css" />
+    <title th:text="${title}">Annual Garden Planting Calendar</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+
+<h1>Result</h1>
+<p th:text="'firstName: ' + ${user.firstName}" />
+<p th:text="'lastName: ' + ${user.lastName}" />
+<p th:text="'userName: ' + ${user.userName}" />
+<p th:text="'password: ' + ${user.password}" />
+<p th:text="'email: ' + ${user.email}" />
+<a href="/user">Submit another User</a>
+</body>
+</html>
