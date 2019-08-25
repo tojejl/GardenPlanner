@@ -8,11 +8,11 @@
 <body>
 
 <h1>Result</h1>
-<p th:text="'firstName: ' + ${user.firstName}" />
-<p th:text="'lastName: ' + ${user.lastName}" />
-<p th:text="'userName: ' + ${user.userName}" />
-<p th:text="'password: ' + ${user.password}" />
-<p th:text="'email: ' + ${user.email}" />
+<p th:text="'First Name: ' + ${userProfile.firstName}" />
+<p th:text="'Last Name: ' + ${userProfile.lastName}" />
+<p th:text="'Username: ' + ${userProfile.userName}" />
+<p th:password="'Password: ' + ${userProfile.password}" />
+<p th:text="'Email: ' + ${userProfile.email}" />
 <a href="/user">Submit another User</a>
 </body>
 </html>
