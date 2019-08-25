@@ -1,21 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <link rel="stylesheet" href="/styles.css" />
-    <meta charset="UTF-8"/>
-    <title th:text="${title}">Plants</title>
-</head>
+<head th:replace="fragments :: head"></head>
+
 <body>
-
-<div class="header">
-    <h1>Annual Garden Planning Tool</h1>
-<h1>Annual Garden Planner</h1>
-    <a href=" ">About</a>
-    <a href="/plants">Plant List</a>
-    <a href="/search">Search</a>
-    <a href="/user">User Login</a>
-</div>
-
+<nav th:replace="fragments :: navigation"></nav>
 
 <form method="post">
     <input type="text" name="plantType" />

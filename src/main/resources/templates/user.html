@@ -1,20 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
-<head>
-    <link rel="stylesheet" href="/styles.css" />
-    <title th:text="${title}">Annual Garden Planting Calendar</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-</head>
 
+<head th:replace="fragments :: head"></head>
 
 <body>
-<div class="header">
-    <h1>Planting Calendar</h1>
-    <a href=" ">About</a>
-    <a href="/plants">Plant List</a>
-    <a href="/search">Search</a>
-    <a href="/user">User Login</a>
-</div>
+
+<nav th:replace="fragments :: navigation"></nav>
 
 <h1>Login Form</h1>
 <form action="#" th:action="@{/user}" th:object="${UserProfile}" method="post" >

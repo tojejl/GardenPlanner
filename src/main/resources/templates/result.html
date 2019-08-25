@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
-<head>
-    <link rel="stylesheet" href="/styles.css" />
-    <title th:text="${title}">Annual Garden Planting Calendar</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-</head>
+
+<head th:replace="fragments :: head"></head>
+
 <body>
+
+<nav th:replace="fragments :: navigation"></nav>
 
 <h1>Result</h1>
 <p th:text="'First Name: ' + ${userProfile.firstName}" />

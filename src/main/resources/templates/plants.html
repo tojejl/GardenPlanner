@@ -1,27 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <link rel="stylesheet" href="/styles.css" />
-    <title th:text="${title}">Annual Garden Planting Calendar</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head th:replace="fragments :: head"></head>
 
 
-</head>
 <body>
-<div class="header">
-    <h1>Planting Calender</h1>
-    <a href="">About</a>
-    <a href="/plants">Plant List</a>
-    <a href="/search">Search</a>
-    <a href="/user">User Login</a>
-</div>
-
-<div class="item1">
-    This is an app designed to help you navigate your garden.
-    With this app, users will be able to browse the list of plants, search by category, or add new plants to share with other garden enthusiasts.
-</div>
+<nav th:replace="fragments :: navigation"></nav>
 
 
+<div>
+
+<p> This is an app designed to help you navigate your garden.
+    With this app, users will be able to browse the list of plants, search by category, or add new plants to share with other garden enthusiasts.</p>
 
 <div>
     <p th:unless="${plants} and ${plants.size()}">no plants</p>

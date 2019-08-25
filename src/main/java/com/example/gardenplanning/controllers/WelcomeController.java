@@ -1,15 +1,16 @@
 package com.example.gardenplanning.controllers;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+
 
 @Controller
 public class WelcomeController {
 
-    @RequestMapping(value = "about")
-    @ResponseBody
-    public String index(){
-        return "Hello Welcome Page";
+    @GetMapping("/about")
+    public String index(Model model){
+        return "about";
     }
 }

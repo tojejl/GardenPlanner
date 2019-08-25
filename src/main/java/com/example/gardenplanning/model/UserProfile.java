@@ -8,17 +8,6 @@ public class UserProfile {
     private String password;
     private String email;
 
-    /*public User(String userName, String firstName, String lastName, String password, String email) {
-        this.userName = userName;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.password = password;
-        this.email = email;
-    }
-*/
-    //public User(){
-
-   // }
 
     public String getUserName() {
         return userName;

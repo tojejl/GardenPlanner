@@ -18,15 +18,14 @@ background-color: $f0e68c;
 h1{
     text-align: center;
     border-style: thick;
-    font-color: #663399
 
 }
 
 div{
-text-align: left;
+    text-align: left;
 }
 
-.header{
+.header {
     text-align: center;
     background-color: #eee8aa;
     border-bottom: solid 4px #9acd32;
