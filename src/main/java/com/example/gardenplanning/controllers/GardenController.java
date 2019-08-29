@@ -18,18 +18,18 @@ public class GardenController {
 
     private static ArrayList<Plant> plants = new ArrayList<>();
 
-    /*public GardenController() {
+    public GardenController() {
         plants = new ArrayList<Plant>();
         plants.add(new Plant("Basil"));
         plants.add(new Plant("Cucumber"));
     }
-     */
+
 
     // Request path: /about
-    @RequestMapping(" ")
-    public String loadWelcome(Model model) {
-        return "index";
-    }
+    //@RequestMapping(" ")
+    //public String loadIndex(Model model) {
+        //return "index";
+    //}
 
     // Request path: /plants
     @RequestMapping(value = "")

@@ -1,23 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
-<head>
-    <meta charset="UTF-8"/>
-    <title></title>
-</head>
-<body>
-
 <head th:fragment="head">
     <link rel="stylesheet" href="/styles.css" />
     <meta charset="UTF-8"/>
     <title> Annual Garden Planting Calendar</title>
 </head>
+<body>
 
 <nav th:fragment="navigation" class="header">
     <h1>Planting Calender</h1>
     <a href="/about">About</a>
+    <a href="/user">User Login</a>
     <a href="/plants">Plant List</a>
     <a href="/search">Search</a>
-    <a href="/user">User Login</a>
 </nav>
 
 </body>
