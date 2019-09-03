@@ -25,11 +25,11 @@ public class GardenController {
     }
 
 
-    // Request path: /about
-    //@RequestMapping(" ")
-    //public String loadIndex(Model model) {
-        //return "index";
-    //}
+    // Request path:
+    @RequestMapping(" ")
+    public String loadIndex(Model model) {
+        return "index";
+    }
 
     // Request path: /plants
     @RequestMapping(value = "")
