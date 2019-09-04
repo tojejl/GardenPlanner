@@ -3,14 +3,15 @@
 <head th:replace="fragments :: head"></head>
 
 <body>
-
 <nav th:replace="fragments :: navigation"></nav>
 
 <div>
+
     <p>This is an app designed to help you navigate your garden.
+
         With this app, users will be able to browse the list of plants, search by category, or add new plants to share with other garden enthusiasts.</p>
 <div>
-    <p th:unles{s="${plants} and ${plants.size()}">no plants</p>
+    <p th:unless="${plants} and ${plants.size()}">no plants</p>
     <br/><br/>
     Number of plants currently in the system: <span th:text="${plants.size()}}">COUNT GOES HERE</span>.
 
@@ -18,7 +19,7 @@
         <li th:each="plant : ${plants}" th:text="${plant.vegetable}"></li>
     </ul>
 
-    <form action="/test/new" method="post">
+    <form action="/experiment/new" method="post">
         <input type="text" name="plantType" />
         <input type="submit" value="Add this plant" />
     </form>

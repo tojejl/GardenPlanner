@@ -24,15 +24,8 @@ public class GardenController {
         plants.add(new Plant("Cucumber"));
     }
 
-
-    // Request path:
-    @RequestMapping(" ")
-    public String loadIndex(Model model) {
-        return "index";
-    }
-
     // Request path: /plants
-    @RequestMapping(value = "")
+    @RequestMapping("")
     public String loadplants(Model model) {
         System.out.println("Loading Plants");
 

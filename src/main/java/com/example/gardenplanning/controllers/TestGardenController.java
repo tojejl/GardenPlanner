@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 
 @Controller
-@RequestMapping("/test")
+@RequestMapping("/experiment")
 public class TestGardenController {
 
 
@@ -23,15 +23,21 @@ public class TestGardenController {
         plants.add(new Plant("Cucumber"));
     }
 
+    //Request path:
+    @RequestMapping(" ")
+    public String loadIndex(Model model) {
+        return "index";
+    }
 
-    //Request path: /test
+
+    //Request path: /experiment
     @RequestMapping(value = "")
     public String loadplants(Model model) {
         System.out.println("Plants Growing");
 
         model.addAttribute("plants", plants);
         model.addAttribute("count", "42");
-        return "/test";
+        return "/experiment";
     }
 
     @RequestMapping("/new")
@@ -45,28 +51,4 @@ public class TestGardenController {
 
 
 
-    /*
-    @RequestMapping(value = "add", method = RequestMethod.GET)
-    public String displayAddPlantForm(Model model){
-        model.addAttribute("title", "Add Plant");
-        return "test/adds";
-    }
-
-    @RequestMapping(value = "remove", method = RequestMethod.GET)
-    public String displayRemovePlantForm(Model model) {
-        model.addAttribute("plants", plants.keySet());
-        model.addAttribute("title", "Remove Plants");
-        return "test/removes";
-    }
-
-    public String processRemovePlantForm(@RequestParam ArrayList<String> plant) {
-
-        for(String aPlant : plant) {
-            plants.remove(aPlant);
-        }
-
-        return "redirect:";
-    }
-
-     */
 
