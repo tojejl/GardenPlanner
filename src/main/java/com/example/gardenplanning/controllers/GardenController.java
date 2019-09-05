@@ -25,7 +25,7 @@ public class GardenController {
     }
 
     // Request path: /plants
-    @RequestMapping("")
+    @RequestMapping(value = "")
     public String loadplants(Model model) {
         System.out.println("Loading Plants");
 
