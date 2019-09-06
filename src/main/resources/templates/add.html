@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="fragments :: head"></head>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"><body>
 
 <body>
+
 <nav th:replace="fragments :: navigation"></nav>
 
 <form method="post">
     <input type="text" name="plantType" />
-    <input type="submit" value= "Add Plant" />
+    <input type="submit" value="Add Plant" />
 </form>
 
 </body>
