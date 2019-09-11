@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body>
+
+<nav th:replace="fragments :: navigation"></nav>
+
+<h2>Please create a User Profile below:</h2>
+<form method="post" action="">
+    <label>Username:</label>
+    <input type="text" name="username" required/><br/>
+    <label>Password:</label>
+    <input type="password" name="password" required/><br/>
+    <label>First Name:</label>
+    <input type="text" name="firstName" /><br/>
+    <label>Last Name:</label>
+    <input type="text" name="lastName" /><br/>
+    <label>Email:</label>
+    <input type="text" name="email"/><br/>
+    <input type="submit" value="Submit" />
+</form>
+
+</body>
+</html>
+
+

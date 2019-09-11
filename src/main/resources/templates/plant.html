@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+
+<body>
+
+<nav th:replace="fragments :: navigation"></nav>
+
+<form method="post" th:action="@{'/plants/' + ${plant.id} + '/edit'}" th:object="${plant}">
+    Description: <input type="text" th:field="*{name}" />
+    <input type="hidden" th:field="*{id}" />
+    <br/><input type="submit" value="Save" />
+</form>
+
+</body>
+</html>

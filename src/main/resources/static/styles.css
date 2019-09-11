@@ -30,3 +30,7 @@ div{
     background-color: #eee8aa;
     border-bottom: solid 4px #9acd32;
 }
+
+ul {
+    text-align: left
+}
