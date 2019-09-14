@@ -28,6 +28,7 @@ public class UserDAO {
                     new Object[]{user.getUsername()}, String.class);
         } catch (EmptyResultDataAccessException ex) {
 
+            System.out.println("Inserting " + user);
             jdbcTemplate.update("INSERT INTO garden.user(username, firstname, lastname, email, password)" +
                             " VALUES (?,?,?,?,?)",
                     user.getUsername(), user.getFirstName(), user.getLastName(), user.getEmail(), user.getPassword());

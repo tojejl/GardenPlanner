@@ -22,7 +22,8 @@ public class PlantDAO {
     public void addPlant(Plant plant) {
         System.out.println("Inserting " + plant);
         jdbcTemplate.update(
-                "INSERT INTO garden.plants(name, startSeedlingsIndoor, sowSeedsDirectly, transplantIndoorSeedlings, growingPeriod, harvestPeriod)" + " VALUES (?,?,?,?,?,?)",
+                "INSERT INTO garden.plants(name, startSeedlingsIndoor, sowSeedsDirectly, transplantIndoorSeedlings, " +
+                        "growingPeriod, harvestPeriod) VALUES (?,?,?,?,?,?)",
                 plant.getName(), plant.getStartSeedlingsIndoor(), plant.getSowSeedsDirectly(),
                 plant.getTransplantIndoorSeedlings(), plant.getGrowingPeriod(), plant.getHarvestPeriod());
     }
@@ -30,8 +31,10 @@ public class PlantDAO {
     public void updatePlant(int id, Plant plant) {
         System.out.println("Updating " + plant);
         jdbcTemplate.update(
-                "UPDATE garden.plants SET name=?, startSeedlingsIndoor=?, sowSeedsDirectly=?, transplantIndoorSeedlings=?, growingPeriod=?, harvestPeriod=?, where id=?",
-                plant.getName(), plant.getStartSeedlingsIndoor(), plant.getSowSeedsDirectly(), plant.getTransplantIndoorSeedlings(), plant.getGrowingPeriod(), plant.getHarvestPeriod(), id);
+                "UPDATE garden.plants SET name=?, startSeedlingsIndoor=?, sowSeedsDirectly=?, " +
+                        "transplantIndoorSeedlings=?, growingPeriod=?, harvestPeriod=?, where id=?",
+                plant.getName(), plant.getStartSeedlingsIndoor(), plant.getSowSeedsDirectly(),
+                plant.getTransplantIndoorSeedlings(), plant.getGrowingPeriod(), plant.getHarvestPeriod(), id);
     }
 
     public Plant findById(int id) {

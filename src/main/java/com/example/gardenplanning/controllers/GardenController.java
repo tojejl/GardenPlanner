@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+import static org.springframework.web.bind.annotation.RequestMethod.GET;
+import static org.springframework.web.bind.annotation.RequestMethod.POST;
+
 @Controller
 @RequestMapping("plants")
 public class GardenController {
@@ -17,7 +20,7 @@ public class GardenController {
     private PlantDAO plantDAO;
 
     //Request path: /plants
-    @GetMapping()
+    @RequestMapping(value="", method=GET)
     public String listPlants(Model model){
         List<Plant> plants = plantDAO.getAll();
         model.addAttribute(("plants"), plants);
@@ -26,21 +29,32 @@ public class GardenController {
         return "plants.html";
     }
 
-    @GetMapping("/new")
-    public String newPlantGet() { return "redirect:"; }
+    @RequestMapping(value="/new")
+    public String loadNewPlantPage() { return "plantNew.html"; }
 
-    @PostMapping("/new")
-    public String saveAddNewPlant(@RequestParam String name,
+    @RequestMapping(value="/search")
+    public String loadSearchPage() {return "search.html";}
+
+    @RequestMapping(value="/addPlant", method= POST)
+    public String saveAddNewPlant(Model model, @RequestParam String name,
                                   @RequestParam String startSeedlingsIndoor,
                                   @RequestParam  String sowSeedsDirectly,
                                   @RequestParam String transplantIndoorSeedlings,
                                   @RequestParam String growingPeriod,
                                   @RequestParam String harvestPeriod) {
+
+        model.addAttribute("name", name);
+        model.addAttribute("startSeedlingsIndoor", startSeedlingsIndoor);
+        model.addAttribute("sowSeedsDirectly", sowSeedsDirectly);
+        model.addAttribute("transplantIndoorSeedlings", transplantIndoorSeedlings);
+        model.addAttribute("growingPeriod", growingPeriod);
+        model.addAttribute("harvestPeriod", harvestPeriod);
+
         System.out.println("Saved it..." + name + " " + " " + startSeedlingsIndoor +
                 " " + sowSeedsDirectly + " " + transplantIndoorSeedlings + " "
                 + growingPeriod + " " + harvestPeriod);
 
-        plantDAO.addPlant(new Plant(name, startSeedlingsIndoor, sowSeedsDirectly, transplantIndoorSeedlings, growingPeriod, harvestPeriod));
+        plantDAO.addPlant(new Plant(-1, name, startSeedlingsIndoor, sowSeedsDirectly, transplantIndoorSeedlings, growingPeriod, harvestPeriod));
         return "redirect:";
     }
 
@@ -49,7 +63,24 @@ public class GardenController {
         Plant plant = plantDAO.findById(id);
         model.addAttribute("plant", plant);
 
-        return "plant.html";
+        return confirmSavedPlant(model);
+   }
+
+   @RequestMapping(value="/addPlant", method= GET)
+   public String confirmSavedPlant(Model model) {
+        List<Plant> plants = plantDAO.getAll();
+        model.addAttribute("plants", plants);
+        model.addAttribute("count", plants.size());
+
+        return "result.html";
+   }
+
+   @RequestMapping(value="/edit/{id}", method= GET)
+   public String viewPlants(Model model, @PathVariable int id) {
+        Plant plant = plantDAO.findById(id);
+        model.addAttribute("plant", plant);
+
+        return "plants.html";
    }
 
     @PostMapping("/{id}/edit")
@@ -60,14 +91,6 @@ public class GardenController {
 }
 
 
-   /*public String addPlants(Model model, @RequestParam String plantType) {
-        System.out.println("Adding plant: " + plantType);
-
-        plants.add(new Plant(plantType));
-        return "redirect:";
-        }
-
-    */
 
 
 
