@@ -1,3 +1,313 @@
 2019-09-08 18:22:17 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLException: Table "USERS" not found; SQL statement:
 SELECT * FROM garden.users [42102-197]
+2019-09-11 19:20:04 jdbc[84]: exception
+org.h2.jdbc.JdbcSQLException: Unknown data type: "VARCHART"; SQL statement:
+create table garden.plants (ID INT PRIMARY KEY,
+name VARCHAR(255) DEFAULT '',
+startseedlingsindoor VARCHART(255) DEFAULT '',
+sowseedsdirectly VARCHART(255) DEFAULT '',
+transplantindoorseedlings VARCHART(255) DEFAULT '',
+harvestperiod VARCHART(255) DEFAULT '',) [50004-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:4400)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:4215)
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:6662)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:6570)
+	at org.h2.command.Parser.parseCreate(Parser.java:4615)
+	at org.h2.command.Parser.parsePrepared(Parser.java:380)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp.query(WebApp.java:1036)
+	at org.h2.server.web.WebApp.process(WebApp.java:223)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:170)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:124)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:161)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2019-09-11 19:26:29 jdbc[84]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO GARDEN.PLANTS ('Basil'[*], 'Early March', 'Early May', 'Late April',	'May through Mid-June',	'Mid-June through mid October') "; expected "identifier"; SQL statement:
+INSERT INTO garden.plants ('Basil', 'Early March', 'Early May', 'Late April',	'May through Mid-June',	'Mid-June through mid October') [42001-197]
+2019-09-11 19:27:28 jdbc[84]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO GARDEN.PLANTS (1[*], 'Basil', 'Early March', 'Early May', 'Late April',	'May through Mid-June', 'Mid-June through mid October') "; expected "identifier"; SQL statement:
+INSERT INTO garden.plants (1, 'Basil', 'Early March', 'Early May', 'Late April',	'May through Mid-June', 'Mid-June through mid October') [42001-197]
+2019-09-11 19:28:09 jdbc[84]: exception
+org.h2.jdbc.JdbcSQLException: Table "PLANTS" already exists; SQL statement:
+create table garden.plants (ID INT PRIMARY KEY,
+name VARCHAR(255) DEFAULT '',
+startseedlingsindoor VARCHAR(255) DEFAULT '',
+sowseedsdirectly VARCHAR(255) DEFAULT '',
+transplantindoorseedlings VARCHAR(255) DEFAULT '',
+harvestperiod VARCHAR(255) DEFAULT '',) [42101-197]
+2019-09-11 19:28:09 jdbc[84]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO GARDEN.PLANTS (1[*], 'Basil', 'Early March', 'Early May', 'Late April', 'May through Mid-June', 'Mid-June through Mid October') "; expected "identifier"; SQL statement:
+INSERT INTO garden.plants (1, 'Basil', 'Early March', 'Early May', 'Late April', 'May through Mid-June', 'Mid-June through Mid October') [42001-197]
+2019-09-11 19:28:35 jdbc[84]: exception
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+INSERT INTO garden.plants values (1, 'Basil', 'Early March', 'Early May', 'Late April', 'May through Mid-June', 'Mid-June through Mid October') [21002-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.command.dml.Insert.prepare(Insert.java:306)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp.query(WebApp.java:1036)
+	at org.h2.server.web.WebApp.process(WebApp.java:223)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:170)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:124)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:161)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2019-09-11 19:30:35 jdbc[84]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "create table garden.plants (ID INT PRIMARY KEY,
+name VARCHAR(255) DEFAULT '',
+startseedlingsindoor VARCHAR(255) DEFAULT '',
+sowseedsdirectly VARCHAR(255) DEFAULT '',
+transplantindoorseedlings VARCHAR(255) DEFAULT '',
+growingperiod VARCHAR(255) DEFAULT[*]"",
+harvestperiod VARCHAR(255) DEFAULT '',);"; SQL statement:
+create table garden.plants (ID INT PRIMARY KEY,
+name VARCHAR(255) DEFAULT '',
+startseedlingsindoor VARCHAR(255) DEFAULT '',
+sowseedsdirectly VARCHAR(255) DEFAULT '',
+transplantindoorseedlings VARCHAR(255) DEFAULT '',
+growingperiod VARCHAR(255) DEFAULT",
+harvestperiod VARCHAR(255) DEFAULT '',); [42000-197]
+2019-09-11 19:31:00 jdbc[84]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "create table garden.plants (ID INT PRIMARY KEY,
+name VARCHAR(255) DEFAULT '',
+startseedlingsindoor VARCHAR(255) DEFAULT '',
+sowseedsdirectly VARCHAR(255) DEFAULT '',
+transplantindoorseedlings VARCHAR(255) DEFAULT '',
+growingperiod VARCHAR(255) DEFAULT[*]"",
+harvestperiod VARCHAR(255) DEFAULT '');"; SQL statement:
+create table garden.plants (ID INT PRIMARY KEY,
+name VARCHAR(255) DEFAULT '',
+startseedlingsindoor VARCHAR(255) DEFAULT '',
+sowseedsdirectly VARCHAR(255) DEFAULT '',
+transplantindoorseedlings VARCHAR(255) DEFAULT '',
+growingperiod VARCHAR(255) DEFAULT",
+harvestperiod VARCHAR(255) DEFAULT ''); [42000-197]
+2019-09-11 19:31:55 jdbc[85]: exception
+org.h2.jdbc.JdbcSQLException: Table "PLANTS" not found; SQL statement:
+select * from garden.plants [42102-197]
+2019-09-12 11:27:36 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO GARDEN.PLANTS VALUES (3, 'Beets (Spring)'N[*]/A', 'MID MARCH, AUGUST',	'N/A', 	'MID-MARCH THROUGH APRIL ',	'MAY THROUGH JUNE OR OCTOBER');
+INSERT INTO garden.plants VALUES (4, 'BEETS (FALL)', 	'N/A'	, 'AUGUST',	'N/A', 	'AUGUST THROUGH SEPTEMBER',	'OCTOBER');
+INSERT INTO garden.plants VALUES (5 'BROCCOLI(SPRING)',	'MID JANUARY',	'MID-MARCH',	'EARLY MARCH',	'EARLY MARCH THROUGH LATE MAY',	'JUNE THROUGH MID-JULY');
+INSERT INTO garden.plants VALUES (6 'BROCCOLI(FALL)',	'N/A',	'MID-JUNE',	'EARLY AUGUST'	August',	'September through Mid-November') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO garden.plants VALUES (3, 'Beets (Spring)'N/A', 'Mid March, August',	'N/A', 	'Mid-March through April ',	'May through June or October');
+INSERT INTO garden.plants VALUES (4, 'Beets (Fall)', 	'N/A'	, 'August',	'N/A', 	'August through September',	'October');
+INSERT INTO garden.plants VALUES (5 'Broccoli(Spring)',	'Mid January',	'Mid-March',	'Early March',	'Early March through late May',	'June through Mid-July');
+INSERT INTO garden.plants VALUES (6 'Broccoli(Fall)',	'N/A',	'Mid-June',	'Early August'	August',	'September through Mid-November') [42001-197]
+2019-09-12 11:28:04 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO GARDEN.PLANTS VALUES (5 'Broccoli(Spring)'[*],	'Mid January',	'Mid-March',	'Early March',	'Early March through late May',	'June through Mid-July') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO garden.plants VALUES (5 'Broccoli(Spring)',	'Mid January',	'Mid-March',	'Early March',	'Early March through late May',	'June through Mid-July') [42001-197]
+2019-09-12 11:28:04 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO garden.plants VALUES (6 'Broccoli(Fall)',	'N/A',	'Mid-June',	'Early August'	August',	'September through Mid-November');
+INSERT INTO garden.plants VALUES (7, 'Brussel Sprouts (Spring)',	'Mid January',	'Mid-March',	'Mid-March',	'Mid-March through May'	, 'Mid-August through Mid-November');
+INSERT INTO garden.plants VALUES (8, 'Cabbage(Spring)',	'Mid-January',	'Mid-March',	'Mid-March',	'Mid-March through May',	'June through Mid-July');
+INSERT INTO garden.plants VALUES (9, 'Cabbage (Fall)',	'N/A',	'Mid-July',	'N/A',	'Mid-July through September',	'October');
+INSERT INTO garden.plants VALUES (10, 'Cauliflower (Spring)', 	'Early February',	'N/A',	'Mid-March',	'Mid-March through Mid-May',	'Late May');
+INSERT INTO garden.plants VALUES (11, 'Cauliflower (Fall)',	'Late June',	'N/A',	'Early August',	 'August through September',	'Early October[*]');"; SQL statement:
+INSERT INTO garden.plants VALUES (6 'Broccoli(Fall)',	'N/A',	'Mid-June',	'Early August'	August',	'September through Mid-November');
+INSERT INTO garden.plants VALUES (7, 'Brussel Sprouts (Spring)',	'Mid January',	'Mid-March',	'Mid-March',	'Mid-March through May'	, 'Mid-August through Mid-November');
+INSERT INTO garden.plants VALUES (8, 'Cabbage(Spring)',	'Mid-January',	'Mid-March',	'Mid-March',	'Mid-March through May',	'June through Mid-July');
+INSERT INTO garden.plants VALUES (9, 'Cabbage (Fall)',	'N/A',	'Mid-July',	'N/A',	'Mid-July through September',	'October');
+INSERT INTO garden.plants VALUES (10, 'Cauliflower (Spring)', 	'Early February',	'N/A',	'Mid-March',	'Mid-March through Mid-May',	'Late May');
+INSERT INTO garden.plants VALUES (11, 'Cauliflower (Fall)',	'Late June',	'N/A',	'Early August',	 'August through September',	'Early October'); [42000-197]
+2019-09-12 11:56:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO GARDEN.PLANTS VALUES (14, 'Cucumber',	'N/A',	'Early May',	'N/A',	'May through Mid July',	'Mid-July through September')
+INSERT[*] INTO GARDEN.PLANTS VALUES (15, 'Eggplant',	'Mid-February',	'Mid-May',	'Mid-May',	'Mid-May through Mid-August',	'Mid-August through Early October') "; SQL statement:
+INSERT INTO garden.plants values (14, 'Cucumber',	'N/A',	'Early May',	'N/A',	'May through Mid July',	'Mid-July through September')
+INSERT INTO garden.plants values (15, 'Eggplant',	'Mid-February',	'Mid-May',	'Mid-May',	'Mid-May through Mid-August',	'Mid-August through Early October') [42000-197]
+2019-09-12 13:21:33 jdbc[34]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO GARDEN.PLANTS VALUES (23, 'Lettuce (Fall)', 'Mid-July' 'Early August'[*], 'Early August', 'August through Mid-September', 'Mid-September through Late October') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO garden.plants VALUES (23, 'Lettuce (Fall)', 'Mid-July' 'Early August', 'Early August', 'August through Mid-September', 'Mid-September through Late October') [42001-197]
+2019-09-12 13:23:40 jdbc[34]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO garden.plants VALUES (3, 'Beets (Spring)', N/A', 'Mid March, August',	'N/A',  'Mid-March through April ', 'May through June or October[*]');"; SQL statement:
+INSERT INTO garden.plants VALUES (3, 'Beets (Spring)', N/A', 'Mid March, August',	'N/A',  'Mid-March through April ', 'May through June or October'); [42000-197]
+2019-09-12 13:27:13 jdbc[34]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO garden.plants VALUES (6,  'Broccoli(Fall)',	'Not Available',	'Mid-June',	'Early August'	August',	'September through Mid-November');
+INSERT INTO garden.plants values (14, 'Cucumber',	'Not Available',	'Early May',	'Not Available',	'May through Mid July',	'Mid-July through September');
+INSERT INTO garden.plants values (15, 'Eggplant',	'Mid-February',	'Mid-May',	'Mid-May',	'Mid-May through Mid-August',	'Mid-August through Early October[*]');"; SQL statement:
+INSERT INTO garden.plants VALUES (6,  'Broccoli(Fall)',	'Not Available',	'Mid-June',	'Early August'	August',	'September through Mid-November');
+INSERT INTO garden.plants values (14, 'Cucumber',	'Not Available',	'Early May',	'Not Available',	'May through Mid July',	'Mid-July through September');
+INSERT INTO garden.plants values (15, 'Eggplant',	'Mid-February',	'Mid-May',	'Mid-May',	'Mid-May through Mid-August',	'Mid-August through Early October'); [42000-197]
+2019-09-12 13:29:58 jdbc[34]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO GARDEN.PLANTS VALUES (6,  'Broccoli (Fall)', 'Not Available', 'Mid-June', 'Early August'	'August'[*],	'September through Mid-November') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO garden.plants VALUES (6,  'Broccoli (Fall)', 'Not Available', 'Mid-June', 'Early August'	'August',	'September through Mid-November') [42001-197]
+2019-09-12 13:43:03 jdbc[35]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-197]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:197)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:137)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:103)
+	at org.h2.Driver.connect(Driver.java:69)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.access$100(HikariPool.java:71)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:706)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:692)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	... 18 more
+2019-09-12 13:47:54 jdbc[34]: exception
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+INSERT INTO garden.plants VALUES (29, 'Onions', 'Early January', 'N/A',	'Early March', 	'Mid-March through Early July	Early to Mid July') [21002-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.command.dml.Insert.prepare(Insert.java:306)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp.query(WebApp.java:1036)
+	at org.h2.server.web.WebApp.process(WebApp.java:223)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:170)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:124)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:161)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)

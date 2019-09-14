@@ -30,10 +30,17 @@ public class GardenController {
     public String newPlantGet() { return "redirect:"; }
 
     @PostMapping("/new")
-    public String saveAddNewPlant(@RequestParam String name) {
-        System.out.println("Saved it..." + name);
+    public String saveAddNewPlant(@RequestParam String name,
+                                  @RequestParam String startSeedlingsIndoor,
+                                  @RequestParam  String sowSeedsDirectly,
+                                  @RequestParam String transplantIndoorSeedlings,
+                                  @RequestParam String growingPeriod,
+                                  @RequestParam String harvestPeriod) {
+        System.out.println("Saved it..." + name + " " + " " + startSeedlingsIndoor +
+                " " + sowSeedsDirectly + " " + transplantIndoorSeedlings + " "
+                + growingPeriod + " " + harvestPeriod);
 
-        plantDAO.addPlant(new Plant(-1, name));
+        plantDAO.addPlant(new Plant(name, startSeedlingsIndoor, sowSeedsDirectly, transplantIndoorSeedlings, growingPeriod, harvestPeriod));
         return "redirect:";
     }
 
