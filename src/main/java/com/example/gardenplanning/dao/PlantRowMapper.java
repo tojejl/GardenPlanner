@@ -10,7 +10,7 @@ public class PlantRowMapper  implements RowMapper<Plant> {
 
     public Plant mapRow(ResultSet resultSet, int ignoreThis) throws SQLException {
         int id;
-        String name;
+        String plantName;
         String startSeedlingsIndoor;
         String sowSeedsDirectly;
         String transplantIndoorSeedlings;
@@ -18,7 +18,7 @@ public class PlantRowMapper  implements RowMapper<Plant> {
         String harvestPeriod;
 
         id = resultSet.getInt("id");
-        name = resultSet.getString("name");
+        plantName = resultSet.getString("plantName");
         startSeedlingsIndoor = resultSet.getString("startSeedlingsIndoor");
         sowSeedsDirectly = resultSet.getString("sowSeedsDirectly");
         transplantIndoorSeedlings = resultSet.getString("transplantIndoorSeedlings");
@@ -26,6 +26,6 @@ public class PlantRowMapper  implements RowMapper<Plant> {
         harvestPeriod = resultSet.getString("harvestPeriod");
 
 
-        return new Plant(id, name, startSeedlingsIndoor, sowSeedsDirectly, transplantIndoorSeedlings, growingPeriod, harvestPeriod);
+        return new Plant(id, plantName, startSeedlingsIndoor, sowSeedsDirectly, transplantIndoorSeedlings, growingPeriod, harvestPeriod);
     }
 }

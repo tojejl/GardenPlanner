@@ -7,7 +7,7 @@
 <nav th:replace="fragments :: navigation"></nav>
 
 <form method="post" th:action="@{'/plants/' + ${plant.id} + '/edit'}" th:object="${plant}">
-    Plant Name: <input type="text" th:field="*{name}" />
+    Plant Name: <input type="text" th:field="*{plantName}" />
     <input type="hidden" th:field="*{id}" />
     <br/> Month to start seedlings indoors: <input type="text" th:field="*{startSeedlingsIndoors}" />
     <br /> Month the sow seeds in the ground: <input type="text" th:field="*{sowSeedsDirectly}" />

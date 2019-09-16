@@ -1,7 +1,7 @@
 CREATE SCHEMA garden authorization sa;
 
 create table garden.plants (ID INT PRIMARY KEY AUTO_INCREMENT,
-name VARCHAR(255) DEFAULT '',
+plantname VARCHAR(255) DEFAULT '',
 startseedlingsindoor VARCHAR(255) DEFAULT '',
 sowseedsdirectly VARCHAR(255) DEFAULT '',
 transplantindoorseedlings VARCHAR(255) DEFAULT '',

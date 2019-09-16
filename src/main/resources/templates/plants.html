@@ -16,11 +16,11 @@
         Number of plants currently in the system: <span th:text="${plants.size()}">COUNT GOES HERE</span>
 
         <ul >
-            <li th:each="plant : ${plants}" th:text="${plant.name}"></li>
+            <li th:each="plant : ${plants}" th:text="${plant.plantName}"></li>
         </ul>
 
         <form method="post" action="/plants/new" >
-            Plant Name: <input type="text" name="name" />
+            Plant Name: <input type="text" name="plantName" />
             <br/> Month to start seedlings indoors: <input type="text" name="startSeedlingsIndoor" />
             <br /> Month to sow seeds in the ground: <input type="text" name="sowSeedsDirectly" />
             <br /> Month to transplant indoor seedlings: <input type="text" name="transplantIndoorSeedlings" />

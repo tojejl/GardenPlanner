@@ -2,7 +2,7 @@ package com.example.gardenplanning.model;
 
 
 public class Plant {
-    private String name;
+    private String plantName;
     private String startSeedlingsIndoor;
     private String sowSeedsDirectly;
     private String transplantIndoorSeedlings;
@@ -10,12 +10,13 @@ public class Plant {
     private String harvestPeriod;
     private int id;
 
-    public Plant() {}
+    public Plant() {
+    }
 
 
-   public Plant(int id, String name,String startSeedlingsIndoor, String sowSeedsDirectly, String transplantIndoorSeedlings, String growingPeriod, String harvestPeriod) {
+   public Plant(int id, String plantName, String startSeedlingsIndoor, String sowSeedsDirectly, String transplantIndoorSeedlings, String growingPeriod, String harvestPeriod) {
         this.id = id;
-        this.name = name;
+        this.plantName = plantName;
         this.startSeedlingsIndoor = startSeedlingsIndoor;
         this.sowSeedsDirectly = sowSeedsDirectly;
         this.transplantIndoorSeedlings = transplantIndoorSeedlings;
@@ -24,8 +25,8 @@ public class Plant {
 
     }
 
-    public Plant (String name, String startSeedlingsIndoor, String sowSeedsDirectly, String transplantIndoorSeedlings, String growingPeriod, String harvestPeriod) {
-        this.name = name;
+    public Plant (String plantName, String startSeedlingsIndoor, String sowSeedsDirectly, String transplantIndoorSeedlings, String growingPeriod, String harvestPeriod) {
+        this.plantName = plantName;
         this.startSeedlingsIndoor = startSeedlingsIndoor;
         this.sowSeedsDirectly = sowSeedsDirectly;
         this.transplantIndoorSeedlings = transplantIndoorSeedlings;
@@ -33,12 +34,12 @@ public class Plant {
         this.harvestPeriod = harvestPeriod;
     }
 
-    public String getName() {
-        return name;
+    public String getPlantName() {
+        return plantName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setPlantName(String plantName) {
+        this.plantName = plantName;
     }
 
     public String getStartSeedlingsIndoor() {
