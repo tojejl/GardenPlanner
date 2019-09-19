@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+
+<body>
+<nav th:replace="fragments :: navigation"></nav>
+
+<h2>Successfully Added New Plant at <span th:text="$plantName}" />!</h2>
+<p>Number of plants currently in the system: <span th:text="${count}" />.</p>
+
+<table class="center">
+    <tr>
+        <td>Plant Name: </td>
+        <td th:text="${plantName}"></td>
+    </tr>
+    <tr>
+        <td>Month the Start Seedlings Indoors: </td>
+        <td th:text="${startSeedlingsIndoor}"></td>
+    </tr>
+    <tr>
+        <td>Month to Sow Seeds Directly: </td>
+        <td th:text="${sowSeedsDirectly}"></td>
+    </tr>
+    <tr>
+        <td>Month to Transplant Indoor Seedlings: </td>
+        <td th:text="${transplantIndoorSeedlings}"></td>
+    <tr>
+        <td>Growing Period: </td>
+        <td th:text="${growingPeriod}"></td>
+    </tr>
+        <td>Harvest Period: </td>
+        <td th:text="${harvestPeriod}"></td>
+    </tr>
+</table>
+</body>
+</html>

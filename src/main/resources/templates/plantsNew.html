@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+
+<body>
+
+<nav th:replace="fragments :: navigation"></nav>
+<h2>Enter New Plant Details:</h2>
+<form action="/addPlant" method="POST">
+    <table class="center">
+        <tr>
+            <td>Plant Name: </td>
+            <td><input name="plantName" type="text" /></td>
+        </tr>
+        <tr>
+            <td>Month to Start Seedlings Indoors: </td>
+            <td><input name="startSeedlingsIndoors" type="text" /></td>
+        </tr>
+        <tr>
+            <td>Month to Sow Seeds Directly Outside: </td>
+            <td><input name="sowSeedsDirectly" type="text" /></td>
+        </tr>
+        <tr>
+            <td>Month to transplant indoor seedlings outside: </td>
+            <td><input name="transplantIndoorSeedlings" type="text" /></td>
+        </tr>
+        <tr>
+            <td>Growing Period: </td>
+            <td><input name="growingPeriod" type="text" /></td>
+        </tr>
+        <tr>
+            <td>Harvest Period: </td>
+            <td><input name="harvestPeriod" type="text" /></td>
+        </tr>
+    </table>
+    <br/>
+    <input type="submit" value="Save this Plant">
+</form>
+</body>
+</html>

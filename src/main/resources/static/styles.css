@@ -11,7 +11,7 @@ body {
 
 }
 .item1{
-background-color: $f0e68c;
+    background-color: $f0e68c;
     padding: ;
 }
 
@@ -34,3 +34,4 @@ div{
 ul {
     text-align: left
 }
+
