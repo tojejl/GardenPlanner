@@ -43,7 +43,7 @@ import java.util.List;
     @RequestMapping(value="landing")
     public String landing(Model model) {
         model.addAttribute("title", "Welcome");
-        return "landing";
+        return "index.html";
     }
 
      @RequestMapping(value= "signup", method=RequestMethod.GET)

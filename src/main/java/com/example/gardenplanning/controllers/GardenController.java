@@ -24,8 +24,8 @@ public class GardenController {
     public String listPlants(Model model){
         List<Plant> plants = plantDAO.getAll();
         model.addAttribute(("plants"), plants);
-
         model.addAttribute("count", plants.size());
+
         return "plants.html";
     }
 
@@ -66,18 +66,18 @@ public class GardenController {
         return "result.html";
     }
 
-    @GetMapping("/{id}/edit")
+    @RequestMapping(value="/edit/{id}", method=GET)
     public String viewPlant(Model model, @PathVariable int id) {
         Plant plant = plantDAO.findById(id);
         model.addAttribute("plant", plant);
 
-        return "plant.html";
+        return "plantsEdit.html";
    }
 
-   @PostMapping("/{id}/edit")
+   @RequestMapping(value="/edit/{id}", method=POST)
    public String editPlant(@ModelAttribute Plant plant, @PathVariable int id) {
      plantDAO.updatePlant(id, plant);
-     return "redirect:/plants";
+     return "redirect:/";
    }
 
 }
