@@ -7,15 +7,15 @@
 <nav th:replace="fragments :: navigation"></nav>
 
 <h2>Edit Plant Details:</h2>
-<form method="POST" th:action="@{'/edit/' + ${plant.id}}" th:object="${plant}">
+<form method="POST" th:action="@{'/edit/' + ${plant.id}}" th:object="${plant}" >
     <table class="center">
         <tr>
             <td>Plant Name: </td>
             <td><input name="plantName" type="text" th:field="*{plantName}"/></td>
         </tr>
         <tr>
-            <td>Month to start seedlings indoors: </td>
-            <td><input name="startSeedlingsIndoor" type="text" th:field="*{startSeedlingsIndoors}"/></td>
+            <td>Month to Start Seedlings Indoors: </td>
+            <td><input name="startSeedlingsIndoor" type="text" th:field="*{startSeedlingsIndoor}"/></td>
         </tr>
         <tr>
             <td>Month to sow seeds in the ground: </td>

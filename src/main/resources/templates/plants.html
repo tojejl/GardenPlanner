@@ -18,9 +18,20 @@
             <ul >
                 <th:block th:each="plant: ${plants}">
                     <li>
-                        <!--span th:text="${plant.plantName}"></span-->
+                        <!--span th:text="${plant.plantName}"></span>
+                        <span> --- </span>
+                        <span th:text="${plant.startSeedlingsIndoor}"></span>
+                        <span> --- </span>
+                        <span th:text="${plant.sowSeedsDirectly}"></span>
+                        <span> --- </span>
+                        <span th:text="${plant.transplantIndoorSeedlings}"></span>
+                        <span> --- </span>
+                        <span th:text="${plant.growingPeriod}"></span>
+                        <span> --- </span>
+                        <span th:text="${plant.harvestPeriod}"></span-->
                         <a href="@{'/edit/' + ${plant.id}}" th:text="${plant.plantName}"></a>
                     </li>
+                    <br/>
                 </th:block>
             </ul>
         </div>

@@ -560,3 +560,6 @@ sowseedsdirectly VARCHAR(255) DEFAULT '',
 transplantindoorseedlings VARCHAR(255) DEFAULT '',
 growingperiod VARCHAR(255) DEFAULT '',
 harvestperiod VARCHAR(255) DEFAULT '') [42101-197]
+2019-09-22 19:39:30 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLException: Table "PLANTS" not found; SQL statement:
+DELETE FROM plants WHERE id = 80 [42102-197]

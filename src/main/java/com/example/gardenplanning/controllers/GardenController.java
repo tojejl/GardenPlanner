@@ -35,7 +35,7 @@ public class GardenController {
     @RequestMapping(value="/addPlant", method=POST)
     public String saveAddNewPlant(Model model, @RequestParam String plantName,
                                   @RequestParam String startSeedlingsIndoor,
-                                 @RequestParam String sowSeedsDirectly,
+                                  @RequestParam String sowSeedsDirectly,
                                   @RequestParam String transplantIndoorSeedlings,
                                   @RequestParam String growingPeriod,
                                   @RequestParam String harvestPeriod) {
@@ -54,11 +54,11 @@ public class GardenController {
         plantDAO.addPlant(new Plant(-1, plantName, startSeedlingsIndoor, sowSeedsDirectly,
                 transplantIndoorSeedlings, growingPeriod, harvestPeriod));
 
-        return confirmSavedJob(model);
+        return confirmSavedPlant(model);
     }
 
     @RequestMapping(value="/addPlant", method=GET)
-    public String confirmSavedJob(Model model) {
+    public String confirmSavedPlant(Model model) {
         List<Plant> plants = plantDAO.getAll();
         model.addAttribute("plants", plants);
         model.addAttribute("count", plants.size());
@@ -66,7 +66,7 @@ public class GardenController {
         return "result.html";
     }
 
-    @RequestMapping(value="/edit/{id}", method=GET)
+    @GetMapping("/{id}/edit")
     public String viewPlant(Model model, @PathVariable int id) {
         Plant plant = plantDAO.findById(id);
         model.addAttribute("plant", plant);
@@ -74,7 +74,7 @@ public class GardenController {
         return "plantsEdit.html";
    }
 
-   @RequestMapping(value="/edit/{id}", method=POST)
+   @PostMapping("/{id}/edit")
    public String editPlant(@ModelAttribute Plant plant, @PathVariable int id) {
      plantDAO.updatePlant(id, plant);
      return "redirect:/";
