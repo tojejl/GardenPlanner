@@ -13,42 +13,16 @@
         <p th:unless="${plants} and ${plants.size()}">Something went wrong. Unable to load plants</p>
 
         <br/><br/>
-        Number of plants currently in the system: <span th:text="${plants.size()}">COUNT GOES HERE</span>
+        Number of plants currently in the system: <span th:text="${plants.size()}">.</span>
         <div class="center">
-            <ul >
-                <th:block th:each="plant: ${plants}">
-                    <li>
-                        <!--span th:text="${plant.plantName}"></span>
-                        <span> --- </span>
-                        <span th:text="${plant.startSeedlingsIndoor}"></span>
-                        <span> --- </span>
-                        <span th:text="${plant.sowSeedsDirectly}"></span>
-                        <span> --- </span>
-                        <span th:text="${plant.transplantIndoorSeedlings}"></span>
-                        <span> --- </span>
-                        <span th:text="${plant.growingPeriod}"></span>
-                        <span> --- </span>
-                        <span th:text="${plant.harvestPeriod}"></span-->
-                        <a href="@{'/edit/' + ${plant.id}}" th:text="${plant.plantName}"></a>
-                    </li>
-                    <br/>
-                </th:block>
-            </ul>
+         <ul >
+            <th:block th:each="plant: ${plants}">
+                <li>
+                    <span th:text="${plant.plantName}"></span>
+                    <a th:href="@{'/edit/' + ${plant.id}}">Learn More</a>
+                </li>
+            </th:block>
+         </ul>
         </div>
-
-
-<!--li th:each="plant : ${plants}" th:text="${plant.plantName}"></li-->
-        <!--form method="post" action="/plants/new" >
-            Plant Name: <input type="text" name="plantName" />
-            <br/> Month to start seedlings indoors: <input type="text" name="startSeedlingsIndoor" />
-            <br /> Month to sow seeds in the ground: <input type="text" name="sowSeedsDirectly" />
-            <br /> Month to transplant indoor seedlings: <input type="text" name="transplantIndoorSeedlings" />
-            <br /> Growing Period: <input type="text" name="growingPeriod" />
-            <br /> Harvest Period: <input type="text" name="harvestPeriod" />
-            <br /><input type="submit" value="Add this Plant" />
-        </form-->
-
-
-
 </body>
 </html>

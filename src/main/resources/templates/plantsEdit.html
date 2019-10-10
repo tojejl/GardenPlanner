@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head th:replace="fragments :: head"></head>
-
 <body>
-
 <nav th:replace="fragments :: navigation"></nav>
 
+
+
 <h2>Edit Plant Details:</h2>
-<form method="POST" th:action="@{'/edit/' + ${plant.id}}" th:object="${plant}" >
+<form method="POST" th:action="@{'/edit/' + ${plant.id}}" th:object="${plant}">
     <table class="center">
         <tr>
             <td>Plant Name: </td>
@@ -18,11 +18,11 @@
             <td><input name="startSeedlingsIndoor" type="text" th:field="*{startSeedlingsIndoor}"/></td>
         </tr>
         <tr>
-            <td>Month to sow seeds in the ground: </td>
-            <td><input name="sowSeedsDirectly" type="text" th:field="*{sowSeedlingsDirectly}"/></td>
+            <td>Month to Sow Seeds Outside : </td>
+            <td><input name="sowSeedsDirectly" type="text" th:field="*{sowSeedsDirectly}"/></td>
         </tr>
         <tr>
-            <td>Month to transplant indoor seedlings: </td>
+            <td>Month to Transplant Indoor Seedlings: </td>
             <td><input name="transplantIndoorSeedlings" type="text" th:field="*{transplantIndoorSeedlings}"/></td>
         </tr>
         <tr>
@@ -35,6 +35,7 @@
         </tr>
     </table>
     <input type="hidden" th:field="*{id}" />
+    <!--textarea name="plantNotes" placeholder= "Plant Notes..." th:field="*{plantNotes}"></textarea-->
     <br/>
     <input type="submit" value="Save">
 </form>

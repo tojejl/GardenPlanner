@@ -14,6 +14,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
 @Controller
+//@RequestMapping("/plants")
 public class GardenController {
 
    @Autowired
@@ -21,15 +22,20 @@ public class GardenController {
 
     //Request path: /plants
     @RequestMapping(value="/plants", method=GET)
+    //@GetMapping
     public String listPlants(Model model){
         List<Plant> plants = plantDAO.getAll();
         model.addAttribute(("plants"), plants);
+
         model.addAttribute("count", plants.size());
 
         return "plants.html";
     }
 
-    @RequestMapping(value="/new")
+    @RequestMapping(value="/about")
+    public String loadIndexPage() {return "about.html";}
+
+    @GetMapping("/new")
     public String loadNewPlantsPage() {return "plantsNew.html"; }
 
     @RequestMapping(value="/addPlant", method=POST)
@@ -66,7 +72,9 @@ public class GardenController {
         return "result.html";
     }
 
-    @GetMapping("/{id}/edit")
+   // @GetMapping("/{id}/edit")
+   // @GetMapping("/edit/{id}")
+    @RequestMapping(value="/edit/{id}", method=GET)
     public String viewPlant(Model model, @PathVariable int id) {
         Plant plant = plantDAO.findById(id);
         model.addAttribute("plant", plant);
@@ -74,10 +82,12 @@ public class GardenController {
         return "plantsEdit.html";
    }
 
-   @PostMapping("/{id}/edit")
+   //@PostMapping("/{id}/edit")
+    @PostMapping("/edit/{id}")
+   //@RequestMapping(value="/edit/{id}", method=POST)
    public String editPlant(@ModelAttribute Plant plant, @PathVariable int id) {
      plantDAO.updatePlant(id, plant);
-     return "redirect:/";
+     return "redirect:/plants";
    }
 
 }

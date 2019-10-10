@@ -563,3 +563,15 @@ harvestperiod VARCHAR(255) DEFAULT '') [42101-197]
 2019-09-22 19:39:30 jdbc[13]: exception
 org.h2.jdbc.JdbcSQLException: Table "PLANTS" not found; SQL statement:
 DELETE FROM plants WHERE id = 80 [42102-197]
+2019-10-09 18:10:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE GARDEN.PLANTS SET PLANTNAME=?, STARTSEEDLINGSINDOOR=?, SOWSEEDSDIRECTLY=?, TRANSPLANTINDOORSEEDLINGS=?, GROWINGPERIOD=?, HARVESTPERIOD=?, WHERE[*] ID=? "; expected "identifier"; SQL statement:
+UPDATE garden.plants SET plantName=?, startSeedlingsIndoor=?, sowSeedsDirectly=?, transplantIndoorSeedlings=?, growingPeriod=?, harvestPeriod=?, where id=? [42001-197]
+2019-10-09 18:12:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE GARDEN.PLANTS SET PLANTNAME=?, STARTSEEDLINGSINDOOR=?, SOWSEEDSDIRECTLY=?, TRANSPLANTINDOORSEEDLINGS=?, GROWINGPERIOD=?, HARVESTPERIOD=?, WHERE[*] ID=? "; expected "identifier"; SQL statement:
+UPDATE garden.plants SET plantName=?, startSeedlingsIndoor=?, sowSeedsDirectly=?, transplantIndoorSeedlings=?, growingPeriod=?, harvestPeriod=?, where id=? [42001-197]
+2019-10-09 18:46:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE GARDEN.PLANTS SET PLANTNAME=?, STARTSEEDLINGSINDOOR=?, SOWSEEDSDIRECTLY=?, TRANSPLANTINDOORSEEDLINGS=?, GROWINGPERIOD=?, HARVESTPERIOD=?, WHERE[*] ID=? "; expected "identifier"; SQL statement:
+UPDATE garden.plants SET plantName=?, startSeedlingsIndoor=?, sowSeedsDirectly=?, transplantIndoorSeedlings=?, growingPeriod=?, harvestPeriod=?, where id=? [42001-197]
+2019-10-09 18:46:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE GARDEN.PLANTS SET PLANTNAME=?, STARTSEEDLINGSINDOOR=?, SOWSEEDSDIRECTLY=?, TRANSPLANTINDOORSEEDLINGS=?, GROWINGPERIOD=?, HARVESTPERIOD=?, WHERE[*] ID=? "; expected "identifier"; SQL statement:
+UPDATE garden.plants SET plantName=?, startSeedlingsIndoor=?, sowSeedsDirectly=?, transplantIndoorSeedlings=?, growingPeriod=?, harvestPeriod=?, where id=? [42001-197]
