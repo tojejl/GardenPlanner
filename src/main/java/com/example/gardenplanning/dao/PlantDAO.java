@@ -28,16 +28,6 @@ public class PlantDAO {
                 plant.getTransplantIndoorSeedlings(), plant.getGrowingPeriod(), plant.getHarvestPeriod());
     }
 
-    /*public void updatePlant(int id, Plant plant) {
-        System.out.println("Updating " + plant);
-        jdbcTemplate.update(
-                "UPDATE garden.plants SET plantName=?, startSeedlingsIndoor=?, sowSeedsDirectly=?, transplantIndoorSeedlings=?, growingPeriod=?, harvestPeriod=? where id=?",
-                plant.getPlantName(), plant.getStartSeedlingsIndoor(), plant.get
-        )
-    }
-
-     */
-
     public void updatePlant(int id, Plant plant) {
         System.out.println("Updating " + plant);
         jdbcTemplate.update(
@@ -45,8 +35,6 @@ public class PlantDAO {
                 plant.getPlantName(), plant.getStartSeedlingsIndoor(), plant.getSowSeedsDirectly(),
                 plant.getTransplantIndoorSeedlings(), plant.getGrowingPeriod(), plant.getHarvestPeriod(), id);
     }
-
-
 
     public Plant findById(int id) {
         List<Plant> matches = jdbcTemplate.query(

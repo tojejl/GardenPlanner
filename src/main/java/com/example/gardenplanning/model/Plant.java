@@ -8,13 +8,14 @@ public class Plant {
     private String transplantIndoorSeedlings;
     private String growingPeriod;
     private String harvestPeriod;
+    private String plantNotes;
     private int id;
 
     public Plant() {
     }
 
 
-   public Plant(int id, String plantName, String startSeedlingsIndoor, String sowSeedsDirectly, String transplantIndoorSeedlings, String growingPeriod, String harvestPeriod) {
+   public Plant(int id, String plantName, String startSeedlingsIndoor, String sowSeedsDirectly, String transplantIndoorSeedlings, String growingPeriod, String harvestPeriod, String plantNotes) {
         this.id = id;
         this.plantName = plantName;
         this.startSeedlingsIndoor = startSeedlingsIndoor;
@@ -22,33 +23,31 @@ public class Plant {
         this.transplantIndoorSeedlings = transplantIndoorSeedlings;
         this.growingPeriod = growingPeriod;
         this.harvestPeriod = harvestPeriod;
+        this.plantNotes = plantNotes;
 
     }
 
-    public Plant (String plantName, String startSeedlingsIndoor, String sowSeedsDirectly, String transplantIndoorSeedlings, String growingPeriod, String harvestPeriod) {
+    public Plant (String plantName, String startSeedlingsIndoor, String sowSeedsDirectly, String transplantIndoorSeedlings, String growingPeriod, String harvestPeriod, String plantNotes) {
         this.plantName = plantName;
         this.startSeedlingsIndoor = startSeedlingsIndoor;
         this.sowSeedsDirectly = sowSeedsDirectly;
         this.transplantIndoorSeedlings = transplantIndoorSeedlings;
         this.growingPeriod = growingPeriod;
         this.harvestPeriod = harvestPeriod;
+        this.plantNotes = plantNotes;
     }
 
     public String getPlantName() {
         return plantName;
     }
 
-    public void setPlantName(String plantName) {
-        this.plantName = plantName;
-    }
+    public void setPlantName(String plantName) {this.plantName = plantName;}
 
     public String getStartSeedlingsIndoor() {
         return startSeedlingsIndoor;
     }
 
-   public void setStartSeedlingsIndoor(String startSeedlingsIndoor) {
-        this.startSeedlingsIndoor = startSeedlingsIndoor;
-    }
+    public void setStartSeedlingsIndoor(String startSeedlingsIndoor) {this.startSeedlingsIndoor = startSeedlingsIndoor;}
 
     public String getSowSeedsDirectly() {
        return sowSeedsDirectly;
@@ -62,7 +61,7 @@ public class Plant {
         return transplantIndoorSeedlings;
     }
 
-   public void setTransplantIndoorSeedlings(String transplantIndoorSeedlings) {
+    public void setTransplantIndoorSeedlings(String transplantIndoorSeedlings) {
         this.transplantIndoorSeedlings = transplantIndoorSeedlings;
     }
 
@@ -70,25 +69,24 @@ public class Plant {
         return growingPeriod;
     }
 
-    public void setGrowingPeriod(String growingPeriod) {
-        this.growingPeriod = growingPeriod;
-    }
+    public void setGrowingPeriod(String growingPeriod) {this.growingPeriod = growingPeriod; }
 
     public String getHarvestPeriod() {
        return harvestPeriod;
     }
 
-    public void setHarvestPeriod(String harvestPeriod) {
-        this.harvestPeriod = harvestPeriod;
-    }
+    public void setHarvestPeriod(String harvestPeriod) {this.harvestPeriod = harvestPeriod;}
+
+    public String getPlantNotes() {return plantNotes; }
+
+    public void setPlantNotes(String plantNotes) {this.plantNotes = plantNotes;}
 
     public int getId() {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+    public void setId(int Id) {this.id = id;}
+
 }
 
 
