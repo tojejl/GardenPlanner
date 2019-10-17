@@ -9,13 +9,14 @@ public class Plant {
     private String growingPeriod;
     private String harvestPeriod;
     private String plantNotes;
+    private String keyword;
     private int id;
 
     public Plant() {
     }
 
 
-   public Plant(int id, String plantName, String startSeedlingsIndoor, String sowSeedsDirectly, String transplantIndoorSeedlings, String growingPeriod, String harvestPeriod, String plantNotes) {
+   public Plant(int id, String plantName, String startSeedlingsIndoor, String sowSeedsDirectly, String transplantIndoorSeedlings, String growingPeriod, String harvestPeriod, String plantNotes, String keyword) {
         this.id = id;
         this.plantName = plantName;
         this.startSeedlingsIndoor = startSeedlingsIndoor;
@@ -24,10 +25,11 @@ public class Plant {
         this.growingPeriod = growingPeriod;
         this.harvestPeriod = harvestPeriod;
         this.plantNotes = plantNotes;
+        this.keyword = keyword;
 
     }
 
-    public Plant (String plantName, String startSeedlingsIndoor, String sowSeedsDirectly, String transplantIndoorSeedlings, String growingPeriod, String harvestPeriod, String plantNotes) {
+    public Plant (String plantName, String startSeedlingsIndoor, String sowSeedsDirectly, String transplantIndoorSeedlings, String growingPeriod, String harvestPeriod, String plantNotes, String keyword) {
         this.plantName = plantName;
         this.startSeedlingsIndoor = startSeedlingsIndoor;
         this.sowSeedsDirectly = sowSeedsDirectly;
@@ -35,6 +37,7 @@ public class Plant {
         this.growingPeriod = growingPeriod;
         this.harvestPeriod = harvestPeriod;
         this.plantNotes = plantNotes;
+        this.keyword = keyword;
     }
 
     public String getPlantName() {
@@ -80,6 +83,10 @@ public class Plant {
     public String getPlantNotes() {return plantNotes; }
 
     public void setPlantNotes(String plantNotes) {this.plantNotes = plantNotes;}
+
+    public String getKeyword() {return keyword;}
+
+    public void setKeyword(String keyword) {this.keyword = keyword;}
 
     public int getId() {
         return id;

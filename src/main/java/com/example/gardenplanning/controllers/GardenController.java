@@ -44,7 +44,8 @@ public class GardenController {
                                   @RequestParam String transplantIndoorSeedlings,
                                   @RequestParam String growingPeriod,
                                   @RequestParam String harvestPeriod,
-                                  @RequestParam String plantNotes) {
+                                  @RequestParam String plantNotes,
+                                  @RequestParam String keyword) {
 
         model.addAttribute("plantName", plantName);
         model.addAttribute("startSeedlingsIndoor", startSeedlingsIndoor);
@@ -53,14 +54,15 @@ public class GardenController {
         model.addAttribute("growingPeriod", growingPeriod);
         model.addAttribute("harvestPeriod", harvestPeriod);
         model.addAttribute("plantNotes", plantNotes);
+        model.addAttribute("keyword", keyword);
 
 
         System.out.println("Saved it..." + plantName + " " + " " + startSeedlingsIndoor +
                 " " + sowSeedsDirectly + " " + transplantIndoorSeedlings + " "
-                + growingPeriod + " " + harvestPeriod + " " + plantNotes);
+                + growingPeriod + " " + harvestPeriod + " " + plantNotes + " " + keyword);
 
         plantDAO.addPlant(new Plant(-1, plantName, startSeedlingsIndoor, sowSeedsDirectly,
-                transplantIndoorSeedlings, growingPeriod, harvestPeriod, plantNotes));
+                transplantIndoorSeedlings, growingPeriod, harvestPeriod, plantNotes, keyword));
 
         return confirmSavedPlant(model);
     }

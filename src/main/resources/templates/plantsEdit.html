@@ -18,7 +18,7 @@
             <td><input name="startSeedlingsIndoor" type="text" th:field="*{startSeedlingsIndoor}"/></td>
         </tr>
         <tr>
-            <td>Month to Sow Seeds Outside : </td>
+            <td>Month to Sow Seeds Outside: </td>
             <td><input name="sowSeedsDirectly" type="text" th:field="*{sowSeedsDirectly}"/></td>
         </tr>
         <tr>
@@ -33,8 +33,14 @@
             <td>Harvest Period: </td>
             <td><input name="harvestPeriod" type="text" th:field="*{harvestPeriod}"/></td>
         </tr>
+        <tr>
+            <td>Keyword: </td>
+            <td><input name="keyword" type="text" th:field="*{keyword}"/></td>
+        </tr>
     </table>
     <input type="hidden" th:field="*{id}" />
+    <!-- p>Plant Notes...: </p>
+        <textarea name="plantNotes" th:field="*{plantNotes}" ></textarea-->
     <textarea name="plantNotes" placeholder="Plant Notes..." th:field="*{plantNotes}"></textarea>
     <br/>
     <input type="submit" value="Save">

@@ -6,7 +6,7 @@
 <body>
 <nav th:replace="fragments :: navigation"></nav>
 
-<h2>Successfully Added New Plant at <span th:text="${plantName}" />!</h2>
+<h2>Successfully Added New Plant <span th:text="${plantName}" />!</h2>
 <p>Number of plants currently in the system: <span th:text="${count}" />.</p>
 
 <table class="center">
@@ -25,14 +25,21 @@
     <tr>
         <td>Month to Transplant Indoor Seedlings: </td>
         <td th:text="${transplantIndoorSeedlings}"></td>
+    </tr>
     <tr>
         <td>Growing Period: </td>
         <td th:text="${growingPeriod}"></td>
     </tr>
+    <tr>
         <td>Harvest Period: </td>
         <td th:text="${harvestPeriod}"></td>
     </tr>
+    <tr>
+        <td>Keyword: </td>
+        <td th:text="${keyword}"></td>
+    </tr>
 </table>
-<div th:text="${plantNotes}" class="description" style="white-space: pre-wrap"></div>
+<p>Plant Notes...: <textarea name="plantNotes" th:field="*{plantNotes}" ></textarea></p>
+<!-- div th:text="${plantNotes}" class="description" style="white-space: pre-wrap"></div-->
 </body>
 </html>

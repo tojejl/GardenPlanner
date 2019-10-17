@@ -17,6 +17,7 @@ public class PlantRowMapper  implements RowMapper<Plant> {
         String growingPeriod;
         String harvestPeriod;
         String plantNotes;
+        String keyword;
 
         id = resultSet.getInt("id");
         plantName = resultSet.getString("plantName");
@@ -26,8 +27,9 @@ public class PlantRowMapper  implements RowMapper<Plant> {
         growingPeriod = resultSet.getString("growingPeriod");
         harvestPeriod = resultSet.getString("harvestPeriod");
         plantNotes = resultSet.getString("plantNotes");
+        keyword = resultSet.getString("keyword");
 
 
-        return new Plant(id, plantName, startSeedlingsIndoor, sowSeedsDirectly, transplantIndoorSeedlings, growingPeriod, harvestPeriod, plantNotes);
+        return new Plant(id, plantName, startSeedlingsIndoor, sowSeedsDirectly, transplantIndoorSeedlings, growingPeriod, harvestPeriod, plantNotes, keyword);
     }
 }
