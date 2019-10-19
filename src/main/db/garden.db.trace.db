@@ -3806,3 +3806,17 @@ INSERT INTO garden.plants VALUES (40, 'Sweet Potato', 'N/A', 'Mid May', 'N/A', '
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
+2019-10-16 19:06:47 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM GARDEN.PLANTS.[*] "; SQL statement:
+select * from garden.plants. [42000-197]
+2019-10-19 14:04:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM GARDEN.PLANTS WHERE KEYWORD LIKE H% [*]"; SQL statement:
+SELECT * from garden.plants where keyword LIKE h% [42000-197]
+2019-10-19 14:04:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "GARDEN" not found; SQL statement:
+SELECT * from garden where keyword LIKE h% [42102-197]
+2019-10-19 14:04:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM GARDEN.PLANTS
+ WHERE KEYWORD LIKE H% [*]"; SQL statement:
+SELECT * from garden.plants
+ where keyword LIKE h% [42000-197]

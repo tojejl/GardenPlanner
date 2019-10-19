@@ -6,7 +6,7 @@
 <body>
 <nav th:replace="fragments :: navigation"></nav>
 
-<h2>Successfully Added New Plant <span th:text="${plantName}" />!</h2>
+<h2>Successfully Added New Plant: <span th:text="${plantName}" />!</h2>
 <p>Number of plants currently in the system: <span th:text="${count}" />.</p>
 
 <table class="center">
@@ -39,7 +39,9 @@
         <td th:text="${keyword}"></td>
     </tr>
 </table>
-<p>Plant Notes...: <textarea name="plantNotes" th:field="*{plantNotes}" ></textarea></p>
-<!-- div th:text="${plantNotes}" class="description" style="white-space: pre-wrap"></div-->
+<br/>
+<div th:text="${plantNotes}" class="description" style="white-space: pre-wrap"></div>
+<!--p>Plant Notes...: <textarea name="plantNotes" th:field="*{plantNotes}" ></textarea></p>
+< div th:text="${plantNotes}" class="description" style="white-space: pre-wrap"></div-->
 </body>
 </html>

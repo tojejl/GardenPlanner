@@ -11,10 +11,10 @@ plantnotes VARCHAR(MAX) DEFAULT ' ',
 keyword VARCHAR(255) DEFAULT ' ');
 
 
-INSERT INTO garden.plants values (1, 'Basil', 'Early March', 'Early May', 'Late April', 'May through Mid June', 'Mid-June through Mid October', 'Sample plant notes', 'herb');
-INSERT INTO garden.plants VALUES (2, 'Beets (Spring)', 'N/A', 'Mid March',	'N/A', 	'Mid-March through April',	'May through June or October', 'Sample plant notes', 'vegetable');
-INSERT INTO garden.plants VALUES (3, 'Beets (Fall)', 'N/A', 'August', 'N/A',  'August through September', 'October', 'Sample plant notes', 'vegetable');
-INSERT INTO garden.plants VALUES (4, 'Broccoli (Spring)',	'Mid January',	'Mid-March',	'Early March',	'Early March through late May',	'June through Mid-July', 'Sample plant notes', 'vegetable');
+INSERT INTO garden.plants values (1, 'Basil', 'Early March', 'Early May', 'Late April', 'May through Mid June', 'Mid-June through Mid October', 'Sample plant notes', 'herb', 'March, May, June, October');
+INSERT INTO garden.plants VALUES (2, 'Beets (Spring)', 'N/A', 'Mid March',	'N/A', 	'Mid-March through April',	'May through June', 'Sample plant notes', 'Root Vegetable, March, April, May, June, Spring');
+INSERT INTO garden.plants VALUES (3, 'Beets (Fall)', 'N/A', 'August', 'N/A',  'August through September', 'October', 'Sample plant notes', 'Root vegetable, August, September, October, Fall');
+INSERT INTO garden.plants VALUES (4, 'Broccoli (Spring)',	'Mid January',	'Mid-March',	'Early March',	'Early March through late May',	'June through Mid-July', 'Sample plant notes', 'vegetable, January, March, May, June, July, Spring');
 INSERT INTO garden.plants VALUES (5, 'Broccoli (Fall)', 'Not Available', 'Mid-June', 'Early August',	'August',	'September through Mid-November', 'Sample plant notes', 'vegetable');
 INSERT INTO garden.plants VALUES (6, 'Brussel Sprouts (Spring)',	'Mid January',	'Mid-March',	'Mid-March',	'Mid-March through May'	, 'Mid-August through Mid-November', 'Sample plant notes', 'vegetable');
 INSERT INTO garden.plants VALUES (7, 'Cabbage(Spring)',	'Mid-January',	'Mid-March',	'Mid-March',	'Mid-March through May',	'June through Mid-July', 'Sample plant notes', 'vegetable');
