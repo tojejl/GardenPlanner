@@ -3820,3 +3820,29 @@ org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM GARDE
  WHERE KEYWORD LIKE H% [*]"; SQL statement:
 SELECT * from garden.plants
  where keyword LIKE h% [42000-197]
+2020-01-18 14:44:41 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "delete from garden.plants where plantName=[*]'brussel sprouts(spring);"; SQL statement:
+delete from garden.plants where plantName='brussel sprouts(spring); [42000-197]
+2020-01-18 14:45:12 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "delete from garden.plants where plantName=[*]'brussel sprouts;"; SQL statement:
+delete from garden.plants where plantName='brussel sprouts; [42000-197]
+2020-01-18 14:45:24 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "delete from garden.plants where plantName=[*]'brussel sprouts;
+select * from garden.plants;"; SQL statement:
+delete from garden.plants where plantName='brussel sprouts;
+select * from garden.plants; [42000-197]
+2020-01-18 14:45:59 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "delete from garden.plants where plantname=[*]'brussel sprouts;"; SQL statement:
+delete from garden.plants where plantname='brussel sprouts; [42000-197]
+2020-01-18 14:46:22 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "delete from garden.plants where plantname= [*]'brussel sprouts;"; SQL statement:
+delete from garden.plants where plantname= 'brussel sprouts; [42000-197]
+2020-01-18 14:48:13 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "DELETE FROM GARDEN.PLANTS WHERE PLANTNAME= 'basil':[*] "; SQL statement:
+delete from garden.plants where plantname= 'basil': [42000-197]
+2020-01-18 15:13:57 jdbc[15]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO garden.plants VALUES (9, 'Cauliflower (Spring)', 	'Early February',	'N/A',	'Mid-March',	'Mid-March through Mid-May',	'Late May', 'Sample plant notes', vegetable[*]');"; SQL statement:
+INSERT INTO garden.plants VALUES (9, 'Cauliflower (Spring)', 	'Early February',	'N/A',	'Mid-March',	'Mid-March through Mid-May',	'Late May', 'Sample plant notes', vegetable'); [42000-197]
+2020-01-18 15:14:25 jdbc[15]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO garden.plants VALUES (9, 'Cauliflower (Spring)', 	'Early February',	'N/A',	'Mid-March',	'Mid-March through Mid-May',	'Late May', 'Sample plant notes', vegetable[*]');"; SQL statement:
+INSERT INTO garden.plants VALUES (9, 'Cauliflower (Spring)', 	'Early February',	'N/A',	'Mid-March',	'Mid-March through Mid-May',	'Late May', 'Sample plant notes', vegetable'); [42000-197]

@@ -21,20 +21,32 @@ public class PlantDAO {
 
     public void addPlant(Plant plant) {
         System.out.println("Inserting " + plant);
-        jdbcTemplate.update(
-                "INSERT INTO garden.plants(plantName, startSeedlingsIndoor, sowSeedsDirectly, transplantIndoorSeedlings, " +
-                        "growingPeriod, harvestPeriod, plantNotes, keyword) VALUES (?,?,?,?,?,?,?,?)",
+        jdbcTemplate.update("INSERT INTO garden.plants(plantName, startSeedlingsIndoor, sowSeedsDirectly, " +
+                        "transplantIndoorSeedlings, growingPeriod, harvestPeriod, plantNotes, keyword) VALUES (?,?,?,?,?,?,?,?)",
                 plant.getPlantName(), plant.getStartSeedlingsIndoor(), plant.getSowSeedsDirectly(),
-                plant.getTransplantIndoorSeedlings(), plant.getGrowingPeriod(), plant.getHarvestPeriod(), plant.getPlantNotes(), plant.getKeyword());
+                plant.getTransplantIndoorSeedlings(), plant.getGrowingPeriod(), plant.getHarvestPeriod(),
+                plant.getPlantNotes(), plant.getKeyword());
+    }
+
+    public void deletePlant(Plant plant) {
+        System.out.println("Deleting " + plant);
+        jdbcTemplate.update("DELETE FROM garden.plants(plantName, startSeedlingsIndoor, sowSeedsDirectly, " +
+                "transplantIndoorSeedlings, growingPeriod, harvestPeriod, plantNotes, keyword) VALUES (?,?,?,?,?,?,?,?)",
+                plant.getPlantName(), plant.getStartSeedlingsIndoor(), plant.getSowSeedsDirectly(),
+                plant.getTransplantIndoorSeedlings(), plant.getGrowingPeriod(), plant.getHarvestPeriod(),
+                plant.getPlantNotes(), plant.getKeyword());
+
     }
 
     public void updatePlant(int id, Plant plant) {
         System.out.println("Updating " + plant);
-        jdbcTemplate.update(
-                "UPDATE garden.plants SET plantName=?, startSeedlingsIndoor=?, sowSeedsDirectly=?, transplantIndoorSeedlings=?, growingPeriod=?, harvestPeriod=?, plantNotes=?, keyword=? where id=?",
+        jdbcTemplate.update("UPDATE garden.plants SET plantName=?, startSeedlingsIndoor=?, sowSeedsDirectly=?, "
+                + "transplantIndoorSeedlings=?, growingPeriod=?, harvestPeriod=?, plantNotes=?, keyword=? where id=?",
                 plant.getPlantName(), plant.getStartSeedlingsIndoor(), plant.getSowSeedsDirectly(),
-                plant.getTransplantIndoorSeedlings(), plant.getGrowingPeriod(), plant.getHarvestPeriod(), plant.getPlantNotes(), plant.getKeyword(), id);
+                plant.getTransplantIndoorSeedlings(), plant.getGrowingPeriod(), plant.getHarvestPeriod(),
+                plant.getPlantNotes(), plant.getKeyword(), id);
     }
+
 
     public Plant findById(int id) {
         List<Plant> matches = jdbcTemplate.query(
@@ -48,4 +60,14 @@ public class PlantDAO {
            return matches.get(0);
         }
     }
+
+    public List<Plant> findByString(String keyword) {
+        System.out.println("Finding plant by searching strings... ");
+        return jdbcTemplate.query("select * from garden.plants WHERE keyword LIKE ?  ", new PlantRowMapper(), "%" + keyword + "%");
+    }
+    
 }
+
+
+
+

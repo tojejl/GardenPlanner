@@ -59,7 +59,6 @@ public class Plant {
     public void setSowSeedsDirectly(String sowSeedsDirectly) {
         this.sowSeedsDirectly = sowSeedsDirectly;
     }
-
     public String getTransplantIndoorSeedlings() {
         return transplantIndoorSeedlings;
     }

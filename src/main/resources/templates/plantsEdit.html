@@ -11,11 +11,11 @@
     <table class="center">
         <tr>
             <td>Plant Name: </td>
-            <td><input name="plantName" type="text" th:field="*{plantName}"/></td>
+            <td><input name="plantName" type="text" th:field="*{plantName}" /></td>
         </tr>
         <tr>
             <td>Month to Start Seedlings Indoors: </td>
-            <td><input name="startSeedlingsIndoor" type="text" th:field="*{startSeedlingsIndoor}"/></td>
+            <td><input name="startSeedlingsIndoor" type="text" th:field="*{startSeedlingsIndoor}" /></td>
         </tr>
         <tr>
             <td>Month to Sow Seeds Outside: </td>
@@ -39,12 +39,10 @@
         </tr>
     </table>
     <input type="hidden" th:field="*{id}" />
-    < p>Plant Notes...: </p>
-        <textarea name="plantNotes" th:field="*{plantNotes}" ></textarea-->
+    <p>Plant Notes...: </p>
+    <textarea name="plantNotes" th:field="*{plantNotes}"></textarea>
     <br/>
-    <!--textarea name="plantNotes" placeholder="Plant Notes..." th:field="*{plantNotes}"></textarea>
-    <br/-->
-    <input type="submit" value="Save">
+    <input type="submit" value="Save Edited Plant" />
 </form>
 </body>
 </html>

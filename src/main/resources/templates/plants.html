@@ -16,10 +16,10 @@
         Number of plants currently in the system: <span th:text="${plants.size()}">.</span>
         <div class="center">
          <ul >
-            <th:block th:each="plant: ${plants}">
+            <th:block th:each="plants: ${plants}">
                 <li>
-                    <span th:text="${plant.plantName}"></span>
-                    <a th:href="@{'/edit/' + ${plant.id}}">Learn More</a>
+                    <span th:text="${plants.plantName}"></span>
+                    <a th:href="@{'/edit/' + ${plants.id}}">Learn More</a>
                 </li>
             </th:block>
          </ul>
