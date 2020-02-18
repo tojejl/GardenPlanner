@@ -107,7 +107,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
     @RequestMapping(value = "search", method = RequestMethod.GET)
     public String search(Model model, @RequestParam(value = "keyword", required = false) String keyword) {
         model.addAttribute("keyword", keyword);
-        List<Plant> plants = plantDAO.findByString(keyword);
+        List<Plant> plants = plantDAO.findByStringLowerCase(keyword);
         model.addAttribute("plants", plants);
         return "search";
 

@@ -21,7 +21,9 @@
 </form>
 
 <ul>
-    <li th:each="plant: ${plants}" th:text="${plant.plantName}"></li>
+    <li th:each="plant: ${plants}" th:text="${plant.plantName}">
+        <!--a th:href="@{'/edit/' + ${plants.id}}">Click here</a-->
+    </li>
 </ul>
 
 

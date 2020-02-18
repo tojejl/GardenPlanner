@@ -48,6 +48,7 @@ public class PlantDAO {
     }
 
 
+
     public Plant findById(int id) {
         List<Plant> matches = jdbcTemplate.query(
                 "SELECT * from garden.plants where id = ?",
@@ -61,11 +62,12 @@ public class PlantDAO {
         }
     }
 
-    public List<Plant> findByString(String keyword) {
+    public List<Plant> findByStringLowerCase(String keyword) {
         System.out.println("Finding plant by searching strings... ");
-        return jdbcTemplate.query("select * from garden.plants WHERE keyword LIKE ?  ", new PlantRowMapper(), "%" + keyword + "%");
+        return jdbcTemplate.query("select * from garden.plants WHERE lower (keyword) LIKE ?  ", new PlantRowMapper(), "%" + keyword + "%");
     }
-    
+
+
 }
 
 
